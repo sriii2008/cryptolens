@@ -1,0 +1,3 @@
+source_record_id,fingerprint_sha256,name,asset_type,environment,location,subject,issuer,serial_number,algorithm,key_size,signature_algorithm,valid_from,valid_to,owner,sans
+csv-demo-101,a94a8fe5ccb19ba61c4c0873d391e987982fbbd3e2d3f4a5b6c7d8e9f0a1b2c3,partner-portal.demo.example,certificate,production,ap-southeast-1/alb-partner-01,"CN=partner-portal.demo.example, O=Northstar Sample Org","CN=Northstar External RSA CA",71AA00921F,RSA,2048,SHA256withRSA,2026-10-01T00:00:00Z,2026-12-05T00:00:00Z,Partner Engineering,partner-portal.demo.example
+csv-demo-102,,telemetry-ingest-signer,signing_key,staging,gcp-kms/asia-southeast1/ring-02,,,,ECDSA (P-256),256,SHA256withECDSA,2026-09-15T00:00:00Z,2027-09-15T00:00:00Z,Observability Team,

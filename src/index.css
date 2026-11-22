@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-editorial: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #f2f6fc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #0284c7;
+  --primary-foreground: #ffffff;
+  --secondary: #eff6ff;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e0f2fe;
+  --accent-foreground: #0f172a;
+  --destructive: #be123c;
+  --border: #e2e8f0;
+  --input: #cbd5e1;
+  --ring: #0ea5e9;
+  --radius: 16px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+  html {
+    font-family: var(--font-sans);
+    background-color: #f2f6fc;
+    color: #0f172a;
+    color-scheme: light;
+  }
+  body {
+    background-color: #f2f6fc;
+    background-image:
+      radial-gradient(ellipse 68% 55% at 14% 8%, rgba(186, 230, 253, 0.55), transparent 70%),
+      radial-gradient(ellipse 56% 50% at 88% 12%, rgba(245, 208, 254, 0.35), transparent 72%),
+      radial-gradient(ellipse 60% 60% at 60% 92%, rgba(219, 234, 254, 0.45), transparent 70%);
+    background-attachment: fixed;
+    color: #0f172a;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.ecdat-glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px -14px rgba(15, 23, 42, 0.08);
+}
+
+/* Static CSS fallback for GradientASCII hero (reduced motion or unsupported WebGL2) */
+.ascii-static-fallback {
+  background-color: #f2f6fc;
+  background-image:
+    radial-gradient(ellipse 64% 70% at 84% 48%, rgba(56, 189, 248, 0.2), rgba(244, 114, 182, 0.08) 45%, rgba(242, 246, 252, 0) 76%),
+    radial-gradient(rgba(14, 165, 233, 0.14) 1px, transparent 1px),
+    linear-gradient(to right, rgba(203, 213, 225, 0.32) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.32) 1px, transparent 1px);
+  background-size: 100% 100%, 10px 10px, 28px 28px, 28px 28px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-surface {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+  .print-muted {
+    color: #475569 !important;
+  }
+}

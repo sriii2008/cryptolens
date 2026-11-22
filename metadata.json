@@ -1,0 +1,6 @@
+{
+  "name": "cryptolens",
+  "description": "ECDAT (Enterprise Cryptographic Discovery & Analysis Tool) — Inventory certificates and cryptographic assets, prioritize deterministic risk findings, and track remediation in one workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
